@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# http://wiki.octave.org/Talk:Build_from_source
+
 apt-get update
 apt-get install -y libtool
 apt-get install -y autoconf
@@ -13,6 +16,8 @@ apt-get install -y sed
 apt-get install -y mercurial
 
 cd /octave
-./configure
+./bootstrap
+
+cd /build
+/octave/configure
 make
-make clean

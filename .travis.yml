@@ -13,4 +13,5 @@ install:
 script:
   - docker --version
   - docker pull ubuntu:17.04
-  - docker run -t -v $PWD/sh:/sh -v $PWD/octave:/octave -w /sh ubuntu:17.04 ./build.sh
+  - mkdir build
+  - docker run -t -v $PWD/sh:/sh -v $PWD/octave:/octave -v $PWD/build:/build -w /sh ubuntu:17.04 ./build.sh
