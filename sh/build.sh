@@ -15,8 +15,8 @@ apt-get install -y bison
 apt-get install -y sed
 apt-get install -y mercurial
 
-cd /octave
-./bootstrap
+# cd /octave
+# ./bootstrap
 
 cd /build
 /octave/configure

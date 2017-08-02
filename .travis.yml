@@ -8,7 +8,11 @@ services:
   - docker
 
 install:
-  - hg clone http://www.octave.org/hg/octave
+  # - hg clone http://www.octave.org/hg/octave
+  - |
+    curl -L -o octave.tar.xz http://ftp.gnu.org/gnu/octave/octave-4.2.1.tar.xz
+    mkdir octave
+    tar xf octave.tar.xz -C octave --strip-components 1
 
 script:
   - docker --version
